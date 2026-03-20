@@ -7,28 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <h2>The 6KM Challenge</h2>
-    <p>In this game, you will help a community access clean water by making strategic decisions and managing resources effectively.</p>
-    <div class="game-instructions">
-        <h3>How to Play:</h3>
-        <ul>
-            <li>Make strategic decisions to bring clean water back to your community. Choose your speed by walking or running.</li>
-            <li>Keep an eye on your water levels as you progress.</li>
-            <li>Watch your heat levels to avoid overheating.</li>
-            <li>Receive donations from supporters when you reach milestones to replenish your water supply.</li>
-            <li>Complete the 6KM challenge to win the game and help your community thrive!</li>
-        </ul>
+    <h1>The 6 KM Water Walk</h1>
+
+    <p>Distance: <span id="distance">0.0</span> KM</p>
+    <progress id="distance-progress" value="0" max="6"></progress>
+
+    <p>Water: <span id="water">100</span>%</p>
+    <progress id="water-progress" value="100" max="100"></progress>
+
+    <p>Heat: <span id="heat">0</span>%</p>
+    <progress id="heat-progress" value="0" max="100"></progress>
+
+    <p>Time: <span id="timer">0</span> seconds</p>
+
+    <button id="walk-button">Walk</button>
+    <button id="run-button">Run</button>
+    <button id="reset-button">Reset</button>
+    <button id="restart-button" hidden>Play Again!</button>
+
+    <div>
+        <h3>Message</h3>
+        <p id="message">Click Walk or Run to start your journey.</p>
     </div>
-    <div class="stats">
-      <p>Time Elapsed: <span id="time">0</span> seconds</p>
-      <p>Distance Covered: <span id="distance">0</span> km</p>
-      <p>Water Level: <span id="water">100</span>%</p>
-      <p>Heat Level: <span id="heat">0</span>%</p>
-      <button id="start-game">Start Game</button>
-      <button id="walk">Walk</button>
-      <button id="run">Run</button>
+
+    <div>
+        <h3>Game Result</h3>
+        <p id="result">Game in progress...</p>
     </div>
+
+    <div>
+        <h3>Leaderboard (Best Times)</h3>
+        <ol id="leaderboard-list"></ol>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
